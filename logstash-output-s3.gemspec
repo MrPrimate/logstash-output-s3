@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name            = 'logstash-output-s3'
-  s.version         = '1.0.3'
+  s.version         = '1.0.4'
   s.licenses        = ['Apache License (2.0)']
   s.summary         = "This plugin was created for store the logstash's events into Amazon Simple Storage Service (Amazon S3)"
   s.description     = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"
@@ -11,10 +11,11 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # Files
-  s.files = `git ls-files`.split($\)+::Dir.glob('vendor/*')
- # s.files = Dir['lib/**/*.rb'] + Dir['bin/*']
- # s.files += Dir['[A-Z]*'] + Dir['test/**/*']
-  #s.files.reject! { |fn| fn.include? "CVS" }
+  #s.files = `git ls-files`.split($\)+::Dir.glob('vendor/*')
+  s.files = Dir['lib/**/*.rb'] + Dir['bin/*']
+  s.files += Dir['[A-Z]*'] + Dir['test/**/*']
+  s.files += Dir['*.gemspec']
+  s.files.reject! { |fn| fn.include? "CVS" }
 #  s.files = Dir[
 #    '.gitignore',
 #    'lib/**/*',
