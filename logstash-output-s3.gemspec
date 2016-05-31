@@ -11,10 +11,26 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # Files
-  #s.files = `git ls-files`.split($\)+::Dir.glob('vendor/*')
-  s.files = Dir['lib/**/*.rb'] + Dir['bin/*']
-  s.files += Dir['[A-Z]*'] + Dir['test/**/*']
-  s.files.reject! { |fn| fn.include? "CVS" }
+  s.files = `git ls-files`.split($\)+::Dir.glob('vendor/*')
+ # s.files = Dir['lib/**/*.rb'] + Dir['bin/*']
+ # s.files += Dir['[A-Z]*'] + Dir['test/**/*']
+  #s.files.reject! { |fn| fn.include? "CVS" }
+#  s.files = Dir[
+#    '.gitignore',
+#    'lib/**/*',
+#    'spec/**/*',
+#    'lib/logstash/outputs/s3.rb',
+#    'vendor/**/*',
+#    '*.gemspec',
+#    '*.md',
+#    'CONTRIBUTORS',
+#    'Gemfile',
+#    'CHANGELOG.md',
+#    'LICENSE',
+#    'Rakefile',
+#    'NOTICE.TXT'
+#  ]
+
 
   # Tests
   s.test_files = s.files.grep(%r{^(test|spec|features)/})
